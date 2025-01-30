@@ -1,5 +1,5 @@
 {
-    "name": "@elizaos/plugin-sui",
+    "name": "@elizaos-plugins/plugin-sui",
     "version": "0.1.8+build.1",
     "type": "module",
     "main": "dist/index.js",
@@ -45,7 +45,10 @@
             },
             "SUI_NETWORK": {
                 "type": "string",
-                "enum": ["mainnet", "testnet"],
+                "enum": [
+                    "mainnet",
+                    "testnet"
+                ],
                 "description": "Network to connect to (mainnet or testnet)"
             }
         }
