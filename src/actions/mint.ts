@@ -109,7 +109,7 @@ const mintNFT: Action = {
             });
 
             const tx = new Transaction();
-	    //ref https://github.com/MystenLabs/sui/blob/main/examples/move/nft/sources/testnet_nft.move
+            //ref https://github.com/MystenLabs/sui/blob/main/examples/move/nft/sources/testnet_nft.move
             tx.moveCall({
                 target: `${packageId}::${module}::mint_to_sender`,
                 arguments: [tx.pure.string(mintContent.name), tx.pure.string(mintContent.description), tx.pure.string(mintContent.url)],
