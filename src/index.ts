@@ -5,12 +5,15 @@ import { SuiService } from "./services/sui.ts";
 import swapToken from "./actions/swap.ts";
 import mintNFT from "./actions/mint";
 
+import createPool from "./actions/create_pool.ts";
+import openPosition from "./actions/open_position.ts";
+import removePosition from "./actions/remove_position.ts";
 export { WalletProvider, transferToken as TransferSuiToken };
 
 export const suiPlugin: Plugin = {
     name: "sui",
     description: "Sui Plugin for Eliza",
-    actions: [transferToken, swapToken, mintNFT],
+    actions: [transferToken, swapToken, mintNFT, createPool, openPosition, removePosition],
     evaluators: [],
     providers: [walletProvider],
     services: [new SuiService()],
